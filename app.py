@@ -99,7 +99,7 @@ def main():
 
     # セッションステートの初期化
     if "messages" not in st.session_state:
-        st.session_state["messages"] = [{"role": "assistant", "content": "何でも聞いてください。"}]
+        st.session_state["messages"] = [{"role": "assistant", "content": "testuser さん、こんにちは！"}]
     if "chat_ended" not in st.session_state:
         st.session_state["chat_ended"] = False
     if "discussion_mode" not in st.session_state:
@@ -236,7 +236,7 @@ def sidebar():
         
         st.subheader("セッション")
         if st.button("チャット履歴をクリア"):
-            st.session_state["messages"] = [{"role": "assistant", "content": "何でも聞いてください。"}]
+            st.session_state["messages"] = [{"role": "assistant", "content": "testuser さん、こんにちは！"}]
             st.session_state["chat_ended"] = False
             st.session_state["discussion_mode"] = False
             st.rerun()
